@@ -3,6 +3,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Evolux — Sites, Landing Pages e E-commerces</title>
+<link href="assets/icone.jpeg" rel="icon" type="image/jpeg"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="assets/f32c4a47e91d6996_css2.css" rel="stylesheet"/>
@@ -205,17 +206,7 @@ html,body{opacity:1!important;visibility:visible!important}
 <div class="pointer-events-none absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-white/[0.035] to-transparent"></div>
 <header class="nav-animate relative z-30 mx-auto flex w-full max-w-[92rem] items-center justify-between px-5 py-6 sm:px-8 lg:px-10 xl:px-12">
 <a aria-label="Evolux home" class="group flex items-center gap-3.5" href="/home">
-<span class="flex shrink-0 items-center justify-center text-rose-400 w-10 h-10 border-rose-400/45 border rounded-full relative shadow-[0_0_1.5rem_rgba(0,155,115,0.28)] backdrop-blur-xl">
-<iconify-icon class="text-2xl text-orange-500/80" height="24" icon="solar:globus-linear" style="stroke-width: 1.5; color: rgb(0, 155, 115)" width="24"></iconify-icon>
-</span>
-<span class="leading-none">
-<span class="block text-sm font-medium uppercase tracking-[0.28em] text-white">
-              EVOLUX
-            </span>
-<span class="mt-1 block text-xs font-normal uppercase tracking-[0.42em] text-slate-400">
-              SITES
-            </span>
-</span>
+<img alt="Evolux" src="assets/logo.jpeg" style="height:2.75rem;width:auto"/>
 </a>
 <nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.035] px-3 py-2 text-xs font-normal uppercase tracking-[0.18em] text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl lg:flex">
 <a class="group/nav relative overflow-hidden rounded-full px-5 py-2.5 transition-all duration-500 hover:text-white hover:shadow-[0_0_28px_rgba(22,201,142,0.22)]" href="/work">
@@ -373,256 +364,6 @@ html,body{opacity:1!important;visibility:visible!important}
 </div>
 </div>
 </section>
-<section class="hero-recreation-section" id="hero-recreation-comparison">
-<div class="hero-recreation-header">
-<p class="hero-recreation-eyebrow">Comparação experimental</p>
-<h3 class="hero-recreation-title">Recriação procedural em Three.js</h3>
-<p class="hero-recreation-desc">
-            O vídeo de fundo da seção acima é uma cena gravada, nos tons dourados
-            originais. Abaixo, uma tentativa de recriar a mesma composição —
-            árvore luminosa, anel e ilha flutuante — em tempo real com Three.js,
-            já na paleta verde, só para efeito de comparação.
-          </p>
-</div>
-<div class="hero-recreation-card">
-<span class="hero-recreation-badge">Three.js · tempo real</span>
-<canvas id="webgl-hero-recreation"></canvas>
-</div>
-</section>
-<style>
-          .hero-recreation-section {
-            position: relative;
-            z-index: 10;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 92rem;
-            padding: 4rem 1.25rem;
-          }
-          @media (min-width: 640px) {
-            .hero-recreation-section { padding: 4rem 2rem; }
-          }
-          .hero-recreation-header {
-            max-width: 42rem;
-            margin: 0 auto 2.5rem;
-            text-align: center;
-          }
-          .hero-recreation-eyebrow {
-            font-size: 0.75rem;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 0.45em;
-            color: #4fe3b9;
-          }
-          .hero-recreation-title {
-            margin-top: 1rem;
-            font-size: 1.5rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            color: #fff;
-          }
-          @media (min-width: 640px) {
-            .hero-recreation-title { font-size: 1.875rem; }
-          }
-          .hero-recreation-desc {
-            margin-top: 1rem;
-            font-size: 0.875rem;
-            font-weight: 300;
-            color: #94a3b8;
-            line-height: 1.7;
-          }
-          .hero-recreation-card {
-            position: relative;
-            margin: 0 auto;
-            height: 26rem;
-            width: 100%;
-            max-width: 64rem;
-            overflow: hidden;
-            border-radius: 3rem;
-            border: 1px solid rgba(22, 201, 142, 0.15);
-            background: #050505;
-            box-shadow: 0 0 90px rgba(22, 201, 142, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-          }
-          @media (min-width: 640px) {
-            .hero-recreation-card { height: 34rem; }
-          }
-          .hero-recreation-card canvas {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            display: block;
-          }
-          .hero-recreation-badge {
-            position: absolute;
-            left: 1.5rem;
-            top: 1.5rem;
-            z-index: 10;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border-radius: 9999px;
-            border: 1px solid rgba(22, 201, 142, 0.3);
-            background: rgba(5, 5, 5, 0.6);
-            backdrop-filter: blur(12px);
-            padding: 0.4rem 0.9rem;
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            color: #8ff3d2;
-          }
-        </style>
-<script type="module">
-          import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
-          (function () {
-            const canvas = document.getElementById('webgl-hero-recreation');
-            if (!canvas) return;
-
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(42, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
-            camera.position.set(0, 2.2, 14);
-
-            const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-            renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-            const group = new THREE.Group();
-            scene.add(group);
-
-            const islandGeom = new THREE.IcosahedronGeometry(3.4, 1);
-            const islandPos = islandGeom.attributes.position;
-            for (let i = 0; i < islandPos.count; i++) {
-              const y = islandPos.getY(i);
-              islandPos.setY(i, y < 0 ? y * 0.28 - Math.random() * 0.3 : y * 0.55 + (Math.random() - 0.5) * 0.25);
-              islandPos.setX(i, islandPos.getX(i) + (Math.random() - 0.5) * 0.15);
-              islandPos.setZ(i, islandPos.getZ(i) + (Math.random() - 0.5) * 0.15);
-            }
-            islandGeom.computeVertexNormals();
-            const islandMat = new THREE.MeshStandardMaterial({ color: 0x0a1410, roughness: 0.9, metalness: 0.1, emissive: 0x022018, emissiveIntensity: 0.4 });
-            const island = new THREE.Mesh(islandGeom, islandMat);
-            island.position.y = -1.6;
-            island.scale.set(1, 0.55, 1);
-            group.add(island);
-
-            const trunkMat = new THREE.MeshStandardMaterial({ color: 0x0d1a14, roughness: 0.8, emissive: 0x0a2a1e, emissiveIntensity: 0.3 });
-            const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.14, 0.28, 2.6, 8), trunkMat);
-            trunk.position.y = -0.2;
-            group.add(trunk);
-
-            [
-              { y: 0.6, rot: 0.6, len: 1.2, side: 1 },
-              { y: 0.9, rot: -0.7, len: 1.1, side: -1 },
-              { y: 1.2, rot: 0.5, len: 1.0, side: 1 },
-            ].forEach((b) => {
-              const mesh = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.09, b.len, 6), trunkMat);
-              mesh.position.set(b.side * b.len * 0.4, b.y, 0);
-              mesh.rotation.z = b.side * b.rot;
-              group.add(mesh);
-            });
-
-            const foliageGeom = new THREE.IcosahedronGeometry(0.42, 1);
-            const foliageMat = new THREE.MeshStandardMaterial({
-              color: 0x0c3324, emissive: 0x16c98e, emissiveIntensity: 1.1, roughness: 0.4, metalness: 0.1, transparent: true, opacity: 0.94,
-            });
-            const foliageGroup = new THREE.Group();
-            const foliageCount = 60;
-            for (let i = 0; i < foliageCount; i++) {
-              const mesh = new THREE.Mesh(foliageGeom, foliageMat);
-              const theta = Math.random() * Math.PI * 2;
-              const phi = Math.acos(2 * Math.random() - 1);
-              const r = 1.5 + Math.random() * 0.9;
-              mesh.position.set(
-                r * Math.sin(phi) * Math.cos(theta),
-                2.4 + r * Math.cos(phi) * 0.65,
-                r * Math.sin(phi) * Math.sin(theta)
-              );
-              mesh.scale.setScalar(0.5 + Math.random() * 0.7);
-              foliageGroup.add(mesh);
-            }
-            group.add(foliageGroup);
-
-            const ring = new THREE.Mesh(
-              new THREE.TorusGeometry(5.2, 0.035, 16, 120),
-              new THREE.MeshBasicMaterial({ color: 0x16c98e, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending })
-            );
-            ring.rotation.x = Math.PI / 2.4;
-            group.add(ring);
-
-            const ring2 = new THREE.Mesh(
-              new THREE.TorusGeometry(5.6, 0.012, 16, 120),
-              new THREE.MeshBasicMaterial({ color: 0x8ff3d2, transparent: true, opacity: 0.25, blending: THREE.AdditiveBlending })
-            );
-            ring2.rotation.x = Math.PI / 2.4 + 0.15;
-            group.add(ring2);
-
-            const sparkCount = 260;
-            const sparkGeom = new THREE.BufferGeometry();
-            const sparkPos = new Float32Array(sparkCount * 3);
-            const sparkSpeeds = new Float32Array(sparkCount);
-            for (let i = 0; i < sparkCount; i++) {
-              const theta = Math.random() * Math.PI * 2;
-              const r = Math.random() * 3.4;
-              sparkPos[i * 3] = Math.cos(theta) * r;
-              sparkPos[i * 3 + 1] = -1.6 + Math.random() * 5.5;
-              sparkPos[i * 3 + 2] = Math.sin(theta) * r;
-              sparkSpeeds[i] = 0.004 + Math.random() * 0.012;
-            }
-            sparkGeom.setAttribute('position', new THREE.BufferAttribute(sparkPos, 3));
-            const sparkMat = new THREE.PointsMaterial({ color: 0x4fe3b9, size: 0.055, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, depthWrite: false });
-            const sparks = new THREE.Points(sparkGeom, sparkMat);
-            group.add(sparks);
-
-            const bgCount = 200;
-            const bgGeom = new THREE.BufferGeometry();
-            const bgPos = new Float32Array(bgCount * 3);
-            for (let i = 0; i < bgCount; i++) {
-              bgPos[i * 3] = (Math.random() - 0.5) * 26;
-              bgPos[i * 3 + 1] = (Math.random() - 0.5) * 16;
-              bgPos[i * 3 + 2] = (Math.random() - 0.5) * 26 - 6;
-            }
-            bgGeom.setAttribute('position', new THREE.BufferAttribute(bgPos, 3));
-            scene.add(new THREE.Points(bgGeom, new THREE.PointsMaterial({ color: 0x0f6b4d, size: 0.045, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending, depthWrite: false })));
-
-            scene.add(new THREE.AmbientLight(0x0a2a1e, 0.6));
-            const keyLight = new THREE.PointLight(0x16c98e, 6, 20, 2);
-            keyLight.position.set(0, 3, 2);
-            group.add(keyLight);
-            const rimLight = new THREE.PointLight(0x4fe3b9, 3, 18, 2);
-            rimLight.position.set(-3, 1, -3);
-            group.add(rimLight);
-
-            window.addEventListener('resize', () => {
-              if (!canvas.clientWidth) return;
-              camera.aspect = canvas.clientWidth / canvas.clientHeight;
-              camera.updateProjectionMatrix();
-              renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-            });
-
-            const clock = new THREE.Clock();
-            function animate() {
-              requestAnimationFrame(animate);
-              const t = clock.getElapsedTime();
-              group.rotation.y = t * 0.18;
-              foliageGroup.children.forEach((m, i) => {
-                m.position.y += Math.sin(t * 1.4 + i) * 0.0015;
-              });
-              const pos = sparkGeom.attributes.position;
-              for (let i = 0; i < sparkCount; i++) {
-                let y = pos.getY(i) + sparkSpeeds[i];
-                if (y > 4.2) y = -1.6;
-                pos.setY(i, y);
-              }
-              pos.needsUpdate = true;
-              ring.rotation.z += 0.0025;
-              ring2.rotation.z -= 0.0018;
-              camera.position.x = Math.sin(t * 0.12) * 1.2;
-              camera.lookAt(0, 0.8, 0);
-              renderer.render(scene, camera);
-            }
-            animate();
-          })();
-        </script>
-
 <section class="relative z-30 mx-auto w-full max-w-[92rem] px-5 pb-8 sm:px-8 lg:px-10 xl:px-12">
 <div class="border-t border-white/10 pt-7">
 <div class="flex flex-col items-center gap-7 lg:flex-row lg:justify-between">
@@ -1814,14 +1555,7 @@ html,body{opacity:1!important;visibility:visible!important}
 <div class="relative mx-auto flex w-full max-w-[92rem] flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
 <div class="max-w-md">
 <a class="group flex items-center gap-3.5" href="#">
-<span class="flex shrink-0 items-center justify-center text-rose-400 w-10 h-10 border-rose-400/45 border rounded-full relative backdrop-blur-xl">
-<iconify-icon class="text-2xl text-orange-500/80" height="24" icon="solar:globus-linear" style="stroke-width: 1.5; color: rgb(0, 155, 115)" width="24"></iconify-icon>
-</span>
-<span class="leading-none">
-<span class="block text-sm font-normal uppercase tracking-[0.28em] text-white">
-                EVOLUX
-              </span>
-</span>
+<img alt="Evolux" src="assets/logo.jpeg" style="height:2.25rem;width:auto"/>
 </a>
 <p class="mt-6 text-sm leading-7 text-slate-400 font-light">
             Sites, landing pages e e-commerces que fazem seu negócio vender mais.
